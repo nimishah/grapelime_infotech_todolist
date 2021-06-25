@@ -1,0 +1,17 @@
+<div class="main">
+    <h1>My ToDo List</h1>
+    <div class="addItem">
+      <input [(ngModel)]= "newItem" #box type="text" placeholder="Add Item" class="addText">
+      <button id="add" type="button" class="btn btn-success mt-3" (click)="add(box.value)" >Add</button>
+    </div>
+    <ul>
+      
+      <li *ngFor = "let i of list">
+        {{i.name}} 
+      
+        <button id="del"   (click)="delete(i)" class="btn btn-primary">x</button> 
+    
+    
+    </li>
+    </ul>
+  </div>
